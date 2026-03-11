@@ -1,5 +1,5 @@
-app/about/AboutPage.module.css
-/* ===== HERO (в духе stock list) ===== */
+/* app/about/AboutPage.module.css */
+
 
 .hero {
   padding: 56px 0 64px;
@@ -520,3 +520,4 @@ app/about/AboutPage.module.css
     padding: 10px 12px;
   }
 }
+
