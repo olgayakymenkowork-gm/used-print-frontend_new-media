@@ -1,5 +1,409 @@
-app/stock-list/stock-list.css
+/* app/stock-list/stock-list.css */
 
+
+.stock-page {
+  background: #f4f5fb;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+
+.stock-header-bar {
+  position: relative;
+  padding: 50px 0 46px;
+  margin-bottom: 28px;
+
+
+  background-image: 
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.88) 35%,
+      rgba(255, 255, 255, 0.65) 55%,
+      rgba(255, 255, 255, 0.0) 85%
+    ),
+    url("/stock-hero.jpg");
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  border-bottom: 1px solid #d8e2ff;
+}
+
+
+.stock-header-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.stock-header-kicker {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  margin-bottom: 4px;
+
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.stock-header-title {
+  color: #0a1a3c; /* более тёмный, дружелюбный тёмно-синий */
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+}
+
+.stock-header-subtitle {
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #374151;
+
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+
+/* layout */
+
+.stock-layout {
+  padding-bottom: 40px;
+}
+
+.stock-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+/* левая колонка */
+
+.stock-filters-col {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+/* маленький текст над фильтрами */
+.stock-filters-intro {
+  margin-bottom: 10px;
+}
+
+.stock-filters-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.stock-filters-text {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* правая колонка */
+
+.stock-list-col {
+  flex: 1;
+}
+
+/* блок с количеством результатов */
+
+.stock-results-info {
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  font-size: 14px;
+  color: #374151;
+}
+
+.stock-results-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.stock-results-count {
+  font-weight: 700;
+  font-size: 16px;
+  color: #111827;
+}
+
+.stock-results-text {
+  font-size: 16px;
+}
+
+/* текст, когда нет результатов */
+.stock-empty {
+  font-size: 14px;
+  color: #6b7280;
+  background: #eef2ff;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+/* карточки */
+
+.stock-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stock-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.stock-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+  border-color: #ad0000;
+  background-color: #fdfdfd;
+}
+
+/* картинка слева */
+.stock-card-image {
+  width: 260px;
+  min-height: 170px;
+  position: relative;
+  background: #d5d5d5;
+  flex-shrink: 0;
+}
+
+.stock-card-body {
+  padding: 14px 18px 16px;
+  flex: 1;
+}
+
+.stock-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.stock-card-title {
+  font-size: 18px;
+  font-weight: 650;
+  color: #111827;
+}
+
+/* бейдж статуса */
+
+.stock-card-badge {
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: #4b5563;
+}
+
+.stock-card-badge--available {
+  background: #16a34a;
+}
+.stock-card-badge--sold {
+  background: #6b7280;
+}
+.stock-card-badge--reserved {
+  background: #f59e0b;
+}
+
+.stock-card-meta {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.stock-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* кнопка "see more" */
+
+.stock-card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #ad0000;
+  border-radius: 999px;
+  text-decoration: none;
+  border: none;
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.12s ease;
+}
+
+.stock-card-link:hover {
+  background: #830000;
+  box-shadow: 0 3px 8px rgba(148, 27, 27, 0.4);
+  transform: translateY(-1px);
+}
+
+/* больше не меняем цвет кнопки отдельным правилом при hover на карточку */
+/* .stock-card:hover .stock-card-link { ... } убрали */
+
+/* описание */
+
+.stock-card-desc {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4b5563;
+  max-height: 3.2em;
+  overflow: hidden;
+}
+
+/* пагинация */
+
+.stock-pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.stock-page-link {
+  color: #ad0000;
+  text-decoration: none;
+}
+
+.stock-page-link:hover {
+  text-decoration: underline;
+}
+
+/* фильтры – карточка, более аккуратная */
+
+.filters-panel {
+  background: #ffffff;
+  padding: 18px 16px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+.filters-section + .filters-section {
+  margin-top: 16px;
+}
+
+.filters-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.filters-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #374151;
+}
+
+/* Кастомные красные radio в фильтрах */
+.filters-option input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ad0000;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: #ffffff;
+}
+
+/* внутренняя красная точка */
+.filters-option input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: #ad0000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.15s ease;
+}
+
+/* выбранный фильтр */
+.filters-option input[type="radio"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* красноватый фон кружка у выбранного фильтра */
+.filters-option input[type="radio"]:checked {
+  border-color: #ad0000;
+  background: #ffe3e3;
+}
+
+.filters-reset-btn {
+  margin-top: 18px;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filters-reset-btn:hover {
+  background: #e5e7eb;
+}
+
+.stock-card-debug {
+  margin-top: 6px;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #777;
+  background: #f7f7f7;
+  padding: 4px 6px;
+  border-radius: 3px;
+  max-height: 80px;
+  overflow: auto;
+}
+
+/* простая адаптивность */
 @media (max-width: 960px) {
   .stock-header-bar {
     padding: 36px 0 30px;
@@ -118,4 +522,44 @@ app/stock-list/stock-list.css
     font-size: 13px;
     padding: 8px 14px;
   }
+}
+
+
+/* PILL кнопки фильтров */
+.filters-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.pill {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #f0f1f5;
+  border: 1px solid #d5d8df;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: #374151;
+}
+
+.pill:hover {
+  background: #e7e9ef;
+}
+
+.pill--active {
+  background: #ad0000;
+  border-color: #ad0000;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(148, 27, 27, 0.3);
+}
+/* Активное состояние для "All" — спокойное, с красной рамкой */
+.pill--all-active {
+  background: #f9fafb;
+  border-color: #ad0000;
+  color: #b91c1c;
+  font-weight: 600;
+  box-shadow: none;
 }
