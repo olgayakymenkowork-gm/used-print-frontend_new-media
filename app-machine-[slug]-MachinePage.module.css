@@ -1,4 +1,4 @@
-/* Общая страница */
+/* app/machine/[slug]/MachinePage.module.css */
 
 .page {
   padding: 32px 0 40px;
@@ -451,3 +451,4 @@
     min-height: 42px;
   }
 }
+
