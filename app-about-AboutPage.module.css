@@ -1,4 +1,73 @@
 app/about/AboutPage.module.css
+/* ===== HERO (в духе stock list) ===== */
+
+.hero {
+  padding: 56px 0 64px;
+  background-size: cover;
+  background-position: center right;
+}
+
+.heroInner {
+  display: flex;
+  align-items: center;
+  min-height: 240px;
+}
+
+.heroText {
+  max-width: 560px;
+}
+
+.heroEyebrow {
+  margin: 0 0 6px;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.heroTitle {
+  margin: 0 0 14px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #0020c2;
+}
+
+/* лёгкий акцент – белая карточка с красной линией слева */
+.heroSubtitleCard {
+  padding: 12px 14px 12px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  border-left: 4px solid #ad0000;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  margin-bottom: 8px;
+}
+
+.heroSubtitle {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #111827;
+}
+.heroHighlights span {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: #eff6ff;
+  color: #1d4ed8;
+  transition:
+    background-color 0.16s ease,
+    transform 0.14s ease,
+    box-shadow 0.16s ease;
+}
+
+.heroHighlights span:hover {
+  background: #e0ecff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
 
 @media (max-width: 900px) {
   .hero {
@@ -12,42 +81,6 @@ app/about/AboutPage.module.css
 
   .heroTitle {
     font-size: 28px;
-  }
-
-  .blockGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .block {
-    padding: 14px;
-    border-radius: 14px;
-  }
-
-  .blockTitle {
-    font-size: 19px;
-  }
-
-  .blockVisual {
-    margin-top: 4px;
-  }
-
-  .languagesGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .languagesCard {
-    padding: 14px;
-  }
-}
-
-@media (max-width: 768px) {
-  .servicesRow {
-    grid-template-columns: 1fr;
-  }
-
-  .serviceItem {
-    padding: 10px;
   }
 }
 
@@ -73,7 +106,403 @@ app/about/AboutPage.module.css
     font-size: 15px;
     line-height: 1.6;
   }
+}
 
+/* ===== INTRO (коротко о компании) ===== */
+
+/* ===== NEW INTRO SECTION (light, separated, no card) ===== */
+
+.introSection {
+  background: #ffffff;
+  padding: 42px 0 46px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.introInner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* main text */
+.introLead {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #1f2937;
+  margin: 0 0 20px;
+  font-weight: 500;
+}
+
+/* three calm tags */
+.introPoints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.introPoints span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #f4f5fb;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 14px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.introPoints span:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+  border-color: #d1d5db;
+  background-color: #ffffff;
+}
+
+/* mobile alignment */
+@media (max-width: 640px) {
+  .introLead {
+    font-size: 16px;
+  }
+}
+
+
+/* ===== ОБЩИЕ БЛОКИ (selling / buying / services) ===== */
+
+.blockSection {
+  background: #f9fafb;
+  padding: 24px 0 28px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.block {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  padding: 18px 20px 18px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.08);
+  border-color: #d1d5db;
+  background-color: #ffffff;
+}
+
+
+.blockMain {
+  border-top: 3px solid #0020c2;
+}
+
+.blockSmall {
+  border-top: 3px solid #ad0000;
+}
+
+.blockHeaderRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.blockEyebrow {
+  margin: 0 0 2px;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.blockTitle {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 650;
+  color: #111827;
+}
+
+.blockTag {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.blockText {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* сетка внутри блока */
+.blockGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.blockList {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.blockList li {
+  margin-bottom: 4px;
+}
+
+/* визуальный блок справа */
+.blockVisual {
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: radial-gradient(circle at top left, #eff6ff, #ffffff);
+  border: 1px solid #dbeafe;
+}
+
+.blockBadge,
+.blockBadgeMuted {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.blockBadge {
+  background: #0020c2;
+  color: #ffffff;
+}
+
+.blockBadgeMuted {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.blockVisualText {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+@media (max-width: 900px) {
+  .blockGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .block {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .blockTitle {
+    font-size: 19px;
+  }
+
+  .blockVisual {
+    margin-top: 4px;
+  }
+}
+
+/* ===== SERVICES – компактный ряд ===== */
+
+.servicesRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.serviceItem {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  transition:
+    transform 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.serviceItem:hover {
+  transform: translateY(-1px);
+  border-color: #cbd5f5;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+}
+
+
+.serviceTitle {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.serviceText {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+@media (max-width: 768px) {
+  .servicesRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .serviceItem {
+    padding: 10px;
+  }
+}
+
+/* ===== LANGUAGES – интегрированный блок ===== */
+
+.languagesSection {
+  background: #f9fafb;
+  padding: 26px 0 34px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.languagesCard {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  padding: 18px 20px 18px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.languagesCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 46px rgba(15, 23, 42, 0.08);
+  border-color: #d1d5db;
+}
+
+
+.languagesHeader {
+  max-width: 580px;
+  margin-bottom: 14px;
+}
+
+.languagesTitle {
+  margin: 0 0 6px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.languagesSubtitle {
+  margin: 0;
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.languagesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.languageCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: radial-gradient(circle at top left, #f9fafb, #ffffff);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease,
+    border-color 0.16s ease;
+}
+
+.languageCard:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  border-color: #d1d5db;
+}
+
+
+.languageBadge {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: conic-gradient(from 150deg, #0020c2, #ad0000, #0020c2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.languageCard:hover .languageBadge {
+  transform: scale(1.06);
+  box-shadow: 0 6px 14px rgba(148, 27, 27, 0.4);
+}
+
+
+.languageCode {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.languageTextBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.languageLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.languageDesc {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+@media (max-width: 900px) {
+  .languagesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .languagesCard {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 640px) {
   .introLead {
     font-size: 16px;
   }
@@ -84,7 +513,7 @@ app/about/AboutPage.module.css
   }
 
   .languagesGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .languageCard {
