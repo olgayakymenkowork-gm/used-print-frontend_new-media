@@ -1,0 +1,149 @@
+app/components/HomeSections.module.css
+
+@media (max-width: 1024px) {
+  .heroPlaceholder,
+  .heroImage {
+    height: 280px;
+  }
+
+  .latestSection,
+  .aboutSection,
+  .gallerySection {
+    padding-top: 24px;
+    padding-bottom: 30px;
+  }
+
+  .latestGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .machineThumb {
+    height: 178px;
+  }
+
+  .galleryGrid {
+    grid-auto-rows: 140px;
+  }
+
+  .miniCtaText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 16px 0 18px;
+  }
+
+  .heroPlaceholder,
+  .heroImage {
+    height: 220px;
+  }
+
+  .heroArrowLeft,
+  .heroArrowRight {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+
+  .latestTitle {
+    font-size: 24px;
+  }
+
+  .latestGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .machineBody {
+    padding: 12px 14px;
+  }
+
+  .machineName {
+    font-size: 17px;
+  }
+
+  .machineRow {
+    font-size: 15px;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 130px;
+  }
+
+  .galleryTileC {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .galleryTileA { grid-column: 1; grid-row: 2; }
+  .galleryTileB { grid-column: 2; grid-row: 2; }
+  .galleryTileD { grid-column: 1; grid-row: 3; }
+  .galleryTileE { grid-column: 2; grid-row: 3; }
+
+  .miniCtaInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .miniCtaText {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .miniCtaButton {
+    width: 100%;
+    min-height: 42px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroPlaceholder,
+  .heroImage {
+    height: 190px;
+  }
+
+  .heroArrowLeft,
+  .heroArrowRight {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .heroDots {
+    bottom: 8px;
+  }
+
+  .latestTitle {
+    font-size: 21px;
+  }
+
+  .latestButton {
+    width: 100%;
+    min-height: 42px;
+    font-size: 16px;
+  }
+
+  .aboutBody {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 155px;
+  }
+
+  .galleryTileA,
+  .galleryTileB,
+  .galleryTileC,
+  .galleryTileD,
+  .galleryTileE {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}

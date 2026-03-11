@@ -1,0 +1,93 @@
+app/about/AboutPage.module.css
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 40px 0 42px;
+    background-position: center;
+  }
+
+  .heroInner {
+    min-height: 200px;
+  }
+
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .blockGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .block {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .blockTitle {
+    font-size: 19px;
+  }
+
+  .blockVisual {
+    margin-top: 4px;
+  }
+
+  .languagesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .languagesCard {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesRow {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceItem {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 28px 0 30px;
+  }
+
+  .heroInner {
+    min-height: 160px;
+  }
+
+  .heroTitle {
+    font-size: 24px;
+  }
+
+  .heroSubtitleCard {
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  .heroSubtitle {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .introLead {
+    font-size: 16px;
+  }
+
+  .blockHeaderRow {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .languagesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .languageCard {
+    padding: 10px 12px;
+  }
+}
