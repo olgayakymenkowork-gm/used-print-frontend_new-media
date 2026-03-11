@@ -1,9 +1,373 @@
+/* Общая страница */
+
+.page {
+  padding: 32px 0 40px;
+  background: #f4f5fb;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.backLink {
+  font-size: 14px;
+  text-decoration: none;
+  color: #ad0000;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Основной layout */
+
+.mainLayout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* Левая колонка (галерея + описание) */
+
+.left {
+  flex: 1.7;
+}
+
+/* Правая колонка (детали + форма) */
+
+.right {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header справа */
+
+.header {
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 14px 16px 12px;
+  margin-bottom: 4px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 750;
+  margin-bottom: 4px;
+  color: #ad0000;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* Галерея */
+
+.gallery {
+  margin-bottom: 20px;
+}
+
+.mainImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: #e5e7eb;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Стрелочки навигации по фото */
+
+.galleryNavButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(17, 24, 39, 0.65);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0;
+  transition:
+    background-color 0.15s ease,
+    transform 0.12s ease,
+    box-shadow 0.15s ease;
+}
+
+.galleryNavButtonLeft {
+  left: 10px;
+}
+
+.galleryNavButtonRight {
+  right: 10px;
+}
+
+.galleryNavButton:hover {
+  background: rgba(173, 0, 0, 0.9);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+  transform: translateY(-50%) scale(1.03);
+}
+
+.thumbsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.thumbButton {
+  border: 1px solid transparent;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.1);
+  transition:
+    border-color 0.15s ease,
+    transform 0.12s ease,
+    box-shadow 0.15s ease;
+}
+
+.thumbButton:hover {
+  border-color: #ad0000;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.15);
+}
+
+.thumbActive {
+  border-color: #ad0000;
+  box-shadow: 0 3px 8px rgba(148, 27, 27, 0.35);
+}
+
+.thumbImage {
+  width: 90px;
+  height: 68px;
+  object-fit: cover;
+}
+
+.noImage {
+  padding: 40px;
+  text-align: center;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  color: #777;
+  background: #ffffff;
+}
+
+/* Карточка деталей машины */
+
+.detailsCard {
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 16px 18px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.detailsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detailsList li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.detailsList li:last-child {
+  border-bottom: none;
+}
+
+.detailsList span {
+  color: #6b7280;
+}
+
+.detailsList strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Описание машины — карточка */
+
+.descriptionSection {
+  margin-top: 20px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 16px 18px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.descriptionBody {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #374151;
+  white-space: pre-line;
+  line-height: 1.1; /* 🔹 меньше расстояние между строками */
+}
+
+.descriptionBody p {
+  margin-bottom: 6px;
+}
+
+/* Форма запроса */
+
+.formCard {
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 16px 18px 18px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+.formIntro {
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 12px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.field span {
+  color: #374151;
+}
+
+.field input,
+.field textarea {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  padding: 7px 9px;
+  font-size: 14px;
+  background: #f9fafb;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #ad0000;
+  box-shadow: 0 0 0 1px rgba(173, 0, 0, 0.2);
+  background: #ffffff;
+}
+
+/* На десктопе — две колонки */
+
 @media (min-width: 900px) {
   .form {
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
   }
 }
+
+/* Элементы на всю ширину формы */
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.statusRow {
+  font-size: 12px;
+  min-height: 18px;
+}
+
+.buttonRow {
+  margin-top: 4px;
+}
+
+/* Кнопка отправки */
+
+.submitButton {
+  width: 100%;
+  margin-top: 6px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  border: none;
+  background: #ad0000;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.12s ease;
+}
+
+.submitButton:hover {
+  background: #830000;
+  box-shadow: 0 4px 10px rgba(148, 27, 27, 0.35);
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Статус */
+
+.formError {
+  font-size: 12px;
+  color: #ad0000;
+}
+
+.formSuccess {
+  font-size: 12px;
+  color: #27ae60;
+}
+
+/* Адаптив */
 
 @media (max-width: 900px) {
   .page {
@@ -38,6 +402,10 @@
   .thumbImage {
     width: 70px;
     height: 54px;
+  }
+
+  .header {
+    margin-top: 4px;
   }
 
   .detailsList li {
