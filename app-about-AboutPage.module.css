@@ -1,5 +1,6 @@
 /* app/about/AboutPage.module.css */
 
+/* ===== HERO (в духе stock list) ===== */
 
 .hero {
   padding: 56px 0 64px;
@@ -71,14 +72,8 @@
 
 @media (max-width: 900px) {
   .hero {
-    padding: 40px 0 42px;
-    background-position: center;
+    padding: 40px 0 46px;
   }
-
-  .heroInner {
-    min-height: 200px;
-  }
-
   .heroTitle {
     font-size: 28px;
   }
@@ -86,25 +81,13 @@
 
 @media (max-width: 640px) {
   .hero {
-    padding: 28px 0 30px;
+    padding: 30px 0 32px;
   }
-
-  .heroInner {
-    min-height: 160px;
-  }
-
   .heroTitle {
     font-size: 24px;
   }
-
-  .heroSubtitleCard {
-    padding: 10px 12px;
-    border-radius: 12px;
-  }
-
   .heroSubtitle {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 16px;
   }
 }
 
@@ -309,15 +292,6 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .block {
-    padding: 14px;
-    border-radius: 14px;
-  }
-
-  .blockTitle {
-    font-size: 19px;
-  }
-
   .blockVisual {
     margin-top: 4px;
   }
@@ -367,10 +341,6 @@
 @media (max-width: 768px) {
   .servicesRow {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .serviceItem {
-    padding: 10px;
   }
 }
 
@@ -494,30 +464,11 @@
 @media (max-width: 900px) {
   .languagesGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .languagesCard {
-    padding: 14px;
   }
 }
 
 @media (max-width: 640px) {
-  .introLead {
-    font-size: 16px;
-  }
-
-  .blockHeaderRow {
-    flex-direction: column;
-    gap: 8px;
-  }
-
   .languagesGrid {
     grid-template-columns: minmax(0, 1fr);
   }
-
-  .languageCard {
-    padding: 10px 12px;
-  }
 }
-
