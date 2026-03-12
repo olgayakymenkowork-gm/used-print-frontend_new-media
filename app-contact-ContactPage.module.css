@@ -1,7 +1,5 @@
 /* app/contact/ContactPage.module.css */
 
-
-
 .page {
   background: #f9fafb;
 }
@@ -133,42 +131,15 @@
 
 @media (max-width: 900px) {
   .hero {
-    padding: 34px 0 30px;
-    background-position: center;
-    background-image: linear-gradient(
-        180deg,
-        rgba(249, 250, 251, 0.96) 0%,
-        rgba(249, 250, 251, 0.9) 100%
-      ),
-      url('/contact-hero-fallback.jpg');
-  }
-
-  .heroInner {
-    min-height: 140px;
+    padding: 32px 0 30px;
   }
 
   .heroTitle {
     font-size: 24px;
   }
 
-  .heroSubtitle {
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .contentSection {
-    padding: 22px 0 34px;
-  }
-
   .contentGrid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
-  }
-
-  .infoCard,
-  .formCard {
-    padding: 16px;
-    border-radius: 14px;
   }
 
   .formCol,
@@ -283,33 +254,5 @@
 @media (max-width: 900px) {
   .formGrid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 10px;
-  }
-
-  .formButton {
-    width: 100%;
-    min-height: 42px;
   }
 }
-
-@media (max-width: 560px) {
-  .hero {
-    padding: 28px 0 24px;
-  }
-
-  .heroTitle {
-    font-size: 22px;
-  }
-
-  .heroSubtitle,
-  .infoText,
-  .formSubtitle {
-    font-size: 14px;
-  }
-
-  .formInput,
-  .formTextarea {
-    font-size: 16px;
-  }
-}
-
