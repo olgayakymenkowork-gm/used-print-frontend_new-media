@@ -1,4 +1,5 @@
 /* app/machine/[slug]/MachinePage.module.css */
+/* Общая страница */
 
 .page {
   padding: 32px 0 40px;
@@ -370,33 +371,12 @@
 /* Адаптив */
 
 @media (max-width: 900px) {
-  .page {
-    padding: 22px 0 30px;
-  }
-
   .mainLayout {
     flex-direction: column;
-    gap: 16px;
   }
 
   .right {
     width: 100%;
-  }
-
-  .header,
-  .detailsCard,
-  .descriptionSection,
-  .formCard {
-    border-radius: 12px;
-    padding: 14px;
-  }
-
-  .title {
-    font-size: 21px;
-  }
-
-  .mainImageWrapper {
-    border-radius: 12px;
   }
 
   .thumbImage {
@@ -407,48 +387,4 @@
   .header {
     margin-top: 4px;
   }
-
-  .detailsList li {
-    font-size: 13px;
-    gap: 10px;
-  }
 }
-
-@media (max-width: 560px) {
-  .topBar {
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .title {
-    font-size: 19px;
-  }
-
-  .subtitle,
-  .descriptionBody,
-  .formIntro {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  .galleryNavButton {
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
-  }
-
-  .thumbImage {
-    width: 62px;
-    height: 48px;
-  }
-
-  .field input,
-  .field textarea {
-    font-size: 16px;
-  }
-
-  .submitButton {
-    min-height: 42px;
-  }
-}
-
