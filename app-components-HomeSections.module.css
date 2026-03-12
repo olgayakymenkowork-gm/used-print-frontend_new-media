@@ -1,4 +1,7 @@
 /* app/components/HomeSections.module.css*/
+/* =========================
+   HERO SLIDER
+   ========================= */
 
 .hero {
   background-color: #f4f5fb;
@@ -469,15 +472,9 @@
     gap: 12px;
   }
 
-  .miniCtaText {
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
   .miniCtaButton {
     width: 100%;
     text-align: center;
-    min-height: 42px;
   }
 }
 
@@ -564,65 +561,32 @@
 @media (max-width: 1024px) {
   .heroPlaceholder,
   .heroImage {
-    height: 280px;
+    height: 260px;
   }
 
   .latestGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .machineThumb {
-    height: 180px;
-  }
-
-  .aboutSection,
-  .gallerySection,
-  .latestSection {
-    padding-top: 24px;
-    padding-bottom: 30px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 16px 0 18px;
-  }
-
   .heroPlaceholder,
   .heroImage {
     height: 220px;
   }
 
-  .heroArrowLeft,
-  .heroArrowRight {
-    width: 34px;
-    height: 34px;
+  .heroOverlay {
+    transform: translate(-50%, -45%);
   }
 
-  .latestTitle {
-    font-size: 24px;
-  }
-
-  .latestGrid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .machineBody {
-    padding: 12px 14px;
-  }
-
-  .machineName {
-    font-size: 17px;
-  }
-
-  .machineRow {
-    font-size: 15px;
+  .heroOverlayTitle {
+    font-size: 22px;
+    white-space: normal;
   }
 
   .galleryGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-auto-rows: 130px;
+    grid-auto-rows: 140px;
   }
 
   .galleryTileC {
@@ -653,54 +617,18 @@
   .miniCtaInner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .heroPlaceholder,
   .heroImage {
-    height: 190px;
-  }
-
-  .heroArrowLeft,
-  .heroArrowRight {
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-  }
-
-  .heroDots {
-    bottom: 8px;
-  }
-
-  .latestTitle {
-    font-size: 21px;
-  }
-
-  .latestButton {
-    width: 100%;
-    min-height: 42px;
-    font-size: 16px;
-  }
-
-  .aboutBody {
-    font-size: 15px;
-    line-height: 1.7;
+    height: 200px;
   }
 
   .galleryGrid {
     grid-template-columns: minmax(0, 1fr);
-    grid-auto-rows: 155px;
-  }
-
-  .galleryTileA,
-  .galleryTileB,
-  .galleryTileC,
-  .galleryTileD,
-  .galleryTileE {
-    grid-column: auto;
-    grid-row: auto;
+    grid-auto-rows: 150px;
   }
 }
 
